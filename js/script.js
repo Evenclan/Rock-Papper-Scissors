@@ -28,7 +28,6 @@ function playGame(playerInput) {
 
     let playerMove = getMoveName(playerInput)
 
-
     printMessage('Twój ruch to: ' + playerMove);
 
     // win condition
@@ -53,23 +52,23 @@ function playGame(playerInput) {
     displayResult(computerMove, playerMove);
 }
 
-function rock() {
-    playGame(1)
-}
-
 let playRock = document.getElementById('play-rock');
 playRock.addEventListener('click', rock);
 
-function paper() {
-    playGame(2)
+function rock() {
+    playGame(1)
 }
 
 let playPaper = document.getElementById('play-paper');
 playPaper.addEventListener('click', paper);
 
-function scissors() {
-    playGame(3)
+function paper() {
+    playGame(2)
 }
 
 let playScissors = document.getElementById('play-scissors');
 playScissors.addEventListener('click', scissors);
+
+function scissors() {
+    playGame(3)
+}
