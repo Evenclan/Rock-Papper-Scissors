@@ -14,7 +14,7 @@
                 return 'papier';
             } else if (argMoveId == 3) {
                 return 'nożyce';
-            } 
+            }
         }
 
         // Choice
@@ -25,24 +25,20 @@
 
         // Display who is winning
 
-        displayResult = function () {
-
+        const displayResult = function (computerMove, playerMove) {
             if (computerMove === 'kamień' && playerMove === 'papier') {
                 printMessage('Ty wygrywasz!');
             } else if (computerMove === 'papier' && playerMove === 'nożyce') {
                 printMessage('Ty wygrywasz!');
             } else if (computerMove === 'nożyce' && playerMove === 'kamień') {
                 printMessage('Ty wygrywasz!');
-            }
-            else if (computerMove === playerMove) {
+            } else if (computerMove === playerMove) {
                 printMessage('Jest remis');
-            }
-            else {
+            } else {
                 printMessage('przegrałeś')
             }
         }
         displayResult(computerMove, playerMove);
-
     }
 
     const playRock = document.getElementById('play-rock');
@@ -65,4 +61,5 @@
     function scissors() {
         playGame(3)
     }
+
 }
